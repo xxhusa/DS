@@ -1,0 +1,8 @@
+C:\Users\lab1069\Desktop\Atividade C#\Painel\Painel\bin\Debug\Painel.exe.config
+C:\Users\lab1069\Desktop\Atividade C#\Painel\Painel\bin\Debug\Painel.exe
+C:\Users\lab1069\Desktop\Atividade C#\Painel\Painel\bin\Debug\Painel.pdb
+C:\Users\lab1069\Desktop\Atividade C#\Painel\Painel\obj\Debug\Painel.csproj.AssemblyReference.cache
+C:\Users\lab1069\Desktop\Atividade C#\Painel\Painel\obj\Debug\Painel.csproj.CoreCompileInputs.cache
+C:\Users\lab1069\Desktop\Atividade C#\Painel\Painel\obj\Debug\Painel.exe
+C:\Users\lab1069\Desktop\Atividade C#\Painel\Painel\obj\Debug\Painel.pdb
+C:\Users\lab1069\Desktop\Atividade C#\Painel\Painel\obj\Debug\Painel.exe.config
