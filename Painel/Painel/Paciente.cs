@@ -6,26 +6,28 @@ using System.Threading.Tasks;
 
 namespace Painel
 {
-    public class Paciente : Pessoa
+    public class Paciente
     {
-        public int idade;
+        
+        public int Idade;
+        public string Nome;
 
 
-        public static void Cadastrar()
+        public  void Cadastrar()
         {
             Console.WriteLine("Qual seu nome:");
-            string nome = Console.ReadLine();
+            Nome = Console.ReadLine();
             Console.WriteLine("Qual sua idade:");
-            int idade = int.Parse(Console.ReadLine());
+            Idade = int.Parse(Console.ReadLine());
 
 
-            if (idade >= 60)
+            if (Idade >= 60)
             {
 
                 Console.WriteLine("Prioridade 1");
 
             }
-            else if (idade <= 17)
+            else if (Idade <= 17)
             {
 
                 Console.WriteLine("Prioridade 2");
@@ -36,7 +38,7 @@ namespace Painel
 
                 Console.WriteLine("Prioridade 3");
             }
-            Console.WriteLine($"Cadastro realizado com sucesso! nome = {nome} ,idade =  {idade},");
+            Console.WriteLine($"Cadastro realizado com sucesso! nome = {Nome} ,idade =  {Idade},");
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Painel
         static void Main(string[] args)
         {
 
-            int opcao;
+            string opcao;
             
 
             do
@@ -21,37 +21,73 @@ namespace Painel
                 Console.WriteLine("2 . Listar pacientes");
                 Console.WriteLine("3 . Atender pacientes da fila");
                 Console.WriteLine("4 . Alterar Dados Cadastrais");
-                Console.WriteLine("0 . Sair");
+                Console.WriteLine("5 . Deletar Paciente"); 
+                Console.WriteLine("Q . Sair");
                 Console.WriteLine("Digite sua opção:");
 
-                opcao = int.Parse(Console.ReadLine());
+                opcao = Console.ReadLine().ToUpper();
+
+                PacienteDAO dao = new PacienteDAO();
 
                 switch (opcao)
                 {
 
-                    case 1:
-                        Paciente p1  = new Paciente();
-                        p1.Cadastrar();
+                    case "1":
+                        Paciente p = new Paciente();
+                        p.Cadastrar();
+                        dao.Inserir(p);
+                        Console.WriteLine("\nPaciente cadastrado e colocado na fila com sucesso!");
+                        Console.ReadKey(); 
+
                         break;
-                    case 2:
-                        Console.WriteLine("tudo bem");
+
+                    case "2":
+                        Console.WriteLine("Listar pacientes");
+
+                        
+                        dao.Mostrar();
+                        Console.ReadKey();
+
                         break;
-                    case 3:
-                        Console.WriteLine("como vai");
+
+                    case "3":
+
+                        Console.WriteLine("Atender pacientes da fila");
+                        dao.AtenderPaciente();
                         break;
-                    case 4:
-                        Console.WriteLine("olaa");
+
+                    case "4":
+                        Console.WriteLine("Alterar Dados Cadastrais dos Pacientes");
+
+                        dao.AlterarCadastro();
+                        Console.ReadKey();
+
+
                         break;
-                    case 0:
+
+                    case "5":
+                        Console.WriteLine("Deletar Paciente");
+
+                        dao.DeletarCadastro();
+                        Console.ReadKey();
+
+                        break;
+
+                    case "Q":
+
                         Console.WriteLine("saindo do programa");
+
                         break;
+
                     default:
+
                         Console.WriteLine("opcao invalida");
+
                         break;
                 } 
-            } while (opcao != 0);
+            } while (opcao != "Q");
 
-            Pessoa [] paciente2 = new Pessoa[15];
+            
 
 
         }
